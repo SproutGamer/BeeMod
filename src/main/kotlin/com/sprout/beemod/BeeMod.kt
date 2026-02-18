@@ -1,12 +1,11 @@
 package com.sprout.beemod
 
 import com.mojang.logging.LogUtils
-import com.sprout.beemod.datagen.DataGenerators
+import com.sprout.beemod.effect.ModEffects
 import com.sprout.beemod.item.ModItems
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
-import net.neoforged.neoforge.common.NeoForge
 import org.slf4j.Logger
 
 @Mod(BeeMod.MODID)
@@ -16,6 +15,7 @@ class BeeMod(modEventBus: IEventBus) {
         modEventBus.addListener { _: FMLCommonSetupEvent -> this.commonSetup() }
 
         ModItems.register(modEventBus)
+        ModEffects.register(modEventBus)
     }
 
     private fun commonSetup() {

@@ -15,6 +15,7 @@ class ModModelProvider(output: PackOutput) : ModelProvider(output, BeeMod.MODID)
 
     override fun registerModels(blockModels: BlockModelGenerators, itemModels: ItemModelGenerators) {
         itemModels.generateFlatItem(ModItems.SOULCOMB.get(), ModelTemplates.FLAT_ITEM)
+        itemModels.generateFlatItem(ModItems.SOUL_NECTAR_BOTTLE.get(), ModelTemplates.FLAT_ITEM)
     }
 
     override fun getKnownItems(): Stream<out Holder<Item>> {

@@ -1,3 +1,6 @@
 {
-  "item.beemod.soulcomb": "Soulcomb"
+  "item.beemod.soulcomb": "Soulcomb",
+  "item.beemod.soul_nectar_bottle": "Bottle of Soul Nectar",
+
+  "effect.beemod.soulbound": "Soulbound"
 }
