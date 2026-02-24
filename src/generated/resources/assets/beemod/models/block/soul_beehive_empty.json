@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "beemod:block/soul_beehive_end",
+    "front": "beemod:block/soul_beehive_front",
+    "particle": "beemod:block/soul_beehive_side",
+    "side": "beemod:block/soul_beehive_side",
+    "top": "beemod:block/soul_beehive_end"
+  }
+}

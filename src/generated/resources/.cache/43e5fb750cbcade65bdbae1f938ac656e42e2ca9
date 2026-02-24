@@ -1,5 +1,9 @@
-// 1.21.11	2026-02-18T17:31:07.369678	Model Definitions - beemod
+// 1.21.11	2026-02-24T19:27:20.513661	Model Definitions - beemod
+40369a5624269cf2df2ad6f6b2e6f9bf54cb99aa assets/beemod/blockstates/soul_beehive.json
 6cca1d18d08abe69fe203be727d5df442dd005ad assets/beemod/items/soul_nectar_bottle.json
 5d4a032a6f4f5118736993000e81cf9a3a1f2c98 assets/beemod/items/soulcomb.json
+15b62d94186c165dfaa5168bea29bffd8c2daa1f assets/beemod/models/block/soul_beehive_empty.json
+8fdcfc151caa3cc5aef13780cd5b322b2c8dcc31 assets/beemod/models/block/soul_beehive_honey.json
 c5eb3d189aa9523db2724fb8e75aa883127d216a assets/beemod/models/item/soul_nectar_bottle.json
 7f91abe9460bbc4aaf9ad01a4a0dc55a7497976f assets/beemod/models/item/soulcomb.json
+371e2ba0414d550d937c0b45dbb9e8d361591cb6 assets/minecraft/items/air.json
