@@ -1,0 +1,8 @@
+{
+  "package": "com.sprout.beemod.mixin",
+  "required": true,
+  "mixins": [
+    "SoulBeeGoToHiveGoalMixin"
+  ],
+  "compatibilityLevel": "JAVA_21"
+}

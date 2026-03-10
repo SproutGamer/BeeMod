@@ -22,7 +22,7 @@ public class ModItems {
                     .food(ModFoods.SOUL_NECTAR_BOTTLE, ModConsumables.SOUL_NECTAR_BOTTLE));
 
     public static final DeferredItem<BlockItem> SOUL_BEEHIVE = ITEMS.registerSimpleBlockItem(ModBlocks.SOUL_BEEHIVE);
-
+    public static final DeferredItem<BlockItem> SOULBLOSSOM = ITEMS.registerSimpleBlockItem(ModBlocks.SOULBLOSSOM);
 
 
     public static void register(IEventBus eventBus) {

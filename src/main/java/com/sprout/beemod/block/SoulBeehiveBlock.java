@@ -15,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BeehiveBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.entity.BeehiveBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -112,7 +113,7 @@ public class SoulBeehiveBlock extends BeehiveBlock {
             ServerLevel world, BlockPos pos
     ) {
         ItemStack soulcomb = new ItemStack(ModItems.SOULCOMB.get());
-        popResource(world, pos, soulcomb);
+        Block.popResource(world, pos, soulcomb);
     }
 
     @Override
