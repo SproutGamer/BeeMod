@@ -27,7 +27,7 @@ public class SoulBeeGoToHiveGoalMixin {
             )
     )
     private boolean redirectIsBlockStateValid(BlockState blockState, TagKey<Block> tag) {
-        if ((this$0.getType() == ModEntities.SOUL_BEE)) {
+        if ((this$0.getType() == ModEntities.SOUL_BEE.get())) {
             return blockState.is(ModBlocks.SOUL_BEEHIVE);
         }
         return blockState.is(tag);

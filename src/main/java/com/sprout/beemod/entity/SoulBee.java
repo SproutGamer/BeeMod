@@ -6,6 +6,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.bee.Bee;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import org.jspecify.annotations.NonNull;
 
 public class SoulBee extends Bee {
 
@@ -23,6 +24,11 @@ public class SoulBee extends Bee {
                 (player, world) -> world.isDarkOutside() && this.hasLineOfSight(player)
         ));
         this.targetSelector.addGoal(0, new StopAttackingInDayGoal(this));
+    }
+
+    @Override
+    public @NonNull EntityType<SoulBee> getType() {
+        return ModEntities.SOUL_BEE.get();
     }
 
     @Override

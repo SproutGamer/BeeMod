@@ -2,12 +2,17 @@ package com.sprout.beemod.event;
 
 import com.sprout.beemod.BeeMod;
 import com.sprout.beemod.effect.ModEffects;
+import com.sprout.beemod.entity.ModEntities;
+import net.minecraft.client.renderer.entity.BeeRenderer;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.bee.Bee;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
@@ -55,5 +60,16 @@ public class ModEvents {
             inv.setItem(i, cached.get(i));
         }
 
+    }
+
+
+    @SubscribeEvent
+    private static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(ModEntities.SOUL_BEE.get(), Bee.createAttributes().build());
+    }
+
+    @SubscribeEvent
+    private static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(ModEntities.SOUL_BEE.get(), BeeRenderer::new);
     }
 }
