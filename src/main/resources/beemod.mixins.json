@@ -3,7 +3,9 @@
   "required": true,
   "mixins": [
     "SoulBeeGoToHiveGoalMixin",
-    "SoulBeeStingerMixin"
+    "SoulBeehiveBlockEntityMixin",
+    "SoulBeeLocateHiveGoalMixin",
+    "SoulBeeMixin"
   ],
   "compatibilityLevel": "JAVA_21"
 }

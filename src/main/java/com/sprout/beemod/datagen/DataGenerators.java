@@ -12,6 +12,7 @@ public class DataGenerators {
     private static void gatherClientData(GatherDataEvent.Client event) {
         event.createProvider(ModModelProvider::new);
         event.createProvider(ModEntityTagProvider::new);
+        event.createProvider(ModPoiTypeTagProvider::new);
     }
 
 }

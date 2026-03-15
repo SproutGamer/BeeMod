@@ -5,6 +5,7 @@ import com.sprout.beemod.block.entity.ModBlockEntities;
 import com.sprout.beemod.effect.ModEffects;
 import com.sprout.beemod.entity.ModEntities;
 import com.sprout.beemod.item.ModItems;
+import com.sprout.beemod.poitype.ModPoiTypes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.bus.api.IEventBus;
@@ -26,6 +27,7 @@ public class BeeMod {
         ModEffects.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModPoiTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
     }
