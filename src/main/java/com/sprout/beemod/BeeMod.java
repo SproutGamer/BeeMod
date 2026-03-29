@@ -4,6 +4,7 @@ import com.sprout.beemod.block.ModBlocks;
 import com.sprout.beemod.block.entity.ModBlockEntities;
 import com.sprout.beemod.effect.ModEffects;
 import com.sprout.beemod.entity.ModEntities;
+import com.sprout.beemod.item.ModCreativeTabs;
 import com.sprout.beemod.item.ModItems;
 import com.sprout.beemod.poitype.ModPoiTypes;
 import net.minecraft.world.level.block.Blocks;
@@ -24,6 +25,7 @@ public class BeeMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
         ModEffects.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);

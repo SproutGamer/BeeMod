@@ -19,5 +19,8 @@ public class ModEntityTagProvider extends EntityTypeTagsProvider {
     protected void addTags(HolderLookup.@NonNull Provider provider) {
         this.tag(EntityTypeTags.BURN_IN_DAYLIGHT)
                 .add(ModEntities.SOUL_BEE.get());
+
+        this.tag(EntityTypeTags.BEEHIVE_INHABITORS)
+                .add(ModEntities.SOUL_BEE.get());
     }
 }

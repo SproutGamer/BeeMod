@@ -1,5 +1,6 @@
 package com.sprout.beemod.block;
 
+import com.sprout.beemod.block.entity.ModBlockEntities;
 import com.sprout.beemod.block.entity.SoulBeehiveBlockEntity;
 import com.sprout.beemod.item.ModItems;
 import net.minecraft.core.BlockPos;
@@ -19,6 +20,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.entity.BeehiveBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
@@ -63,7 +66,7 @@ public class SoulBeehiveBlock extends BeehiveBlock {
                 stack.hurtAndBreak(1, player, hand.asEquipmentSlot());
                 actionPerformed = true;
                 world.gameEvent(player, GameEvent.SHEAR, blockPos);
-            } else if (stack.is(Items.GLASS_BOTTLE)){
+            } else if (stack.is(Items.GLASS_BOTTLE)) {
                 stack.shrink(1);
                 world.playSound(
                         player,
@@ -119,5 +122,10 @@ public class SoulBeehiveBlock extends BeehiveBlock {
     @Override
     public @Nullable BlockEntity newBlockEntity(@NonNull BlockPos blockPos, @NonNull BlockState blockState) {
         return new SoulBeehiveBlockEntity(blockPos, blockState);
+    }
+
+    @Override
+    public <T extends BlockEntity> @Nullable BlockEntityTicker<T> getTicker(Level level, @NonNull BlockState state, @NonNull BlockEntityType<T> type) {
+        return level.isClientSide() ? null : createTickerHelper(type, ModBlockEntities.SOUL_BEEHIVE.get(), BeehiveBlockEntity::serverTick);
     }
 }

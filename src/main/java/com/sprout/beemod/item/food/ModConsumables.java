@@ -9,7 +9,7 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 public class ModConsumables {
 
     public static final Consumable SOUL_NECTAR_BOTTLE = Consumables.defaultDrink()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(ModEffects.SOULBOUND)))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(ModEffects.SOULBOUND, 5 * 60 * 20)))
             .build();
 
 }
